@@ -1,0 +1,51 @@
+{
+  "name": "@deuscx/unocss-preset-daisy",
+  "version": "0.0.1",
+  "description": "unocss preset for daisyui",
+  "funding": "https://github.com/sponsors/deuscx",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deuscx/tailwind-uno.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/Deuscx/tailwind-uno/issues"
+  },
+  "scripts": {
+    "prepare": "npm run build:rules",
+    "build": "tsup",
+    "build:rules": "tsx ./src/build.ts"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "utils",
+    "types"
+  ],
+  "sideEffects": false,
+  "author": "deuscx",
+  "license": "MIT",
+  "dependencies": {
+    "@unocss/core": "^0.48.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.0",
+    "@types/node": "^18.11.18",
+    "javascript-stringify": "^2.1.0",
+    "tsx": "^3.12.1",
+    "fast-glob": "^3.2.12",
+    "fs-extra": "^11.1.0"
+  }
+}

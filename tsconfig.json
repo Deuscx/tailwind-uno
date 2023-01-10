@@ -11,6 +11,11 @@
         "strictNullChecks": true,
         "resolveJsonModule": true,
         "skipLibCheck": true,
-        "skipDefaultLibCheck": true
-    }
+        "skipDefaultLibCheck": true,
+    },
+    "paths": {
+        "@deuscx/preset-daisy": [
+            "./packages/preset-daisy/src/index.ts"
+        ],
+    },
 }
