@@ -15,7 +15,7 @@ Supported CSS Components:
 
 
 ```bash
-  npm install @deuscx/unocss-preset-daisy
+  npm install @deuscx/unocss-preset-daisy -D
 ```
 
 ```js
@@ -29,12 +29,14 @@ export default defineConfig({
 
 ```
     
-## Usage/Examples
+## Usage
 
 ```html
  <button type="button" class="btn btn-primary">Hello World</button>
 ```
+## Presets
 
+- [`@deuscx/unocss-preset-daisy`](./packages/preset-daisy/README.md)
 ## Alternative
 
 This Project is inspired by [unocss-preset-daisy](https://github.com/kidonng/unocss-preset-daisy)

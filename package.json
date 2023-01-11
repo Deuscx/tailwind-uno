@@ -35,7 +35,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "test:update": "vitest -u",
-    "play": "npm -C playground run dev"
+    "play": "npm -C playground run dev",
+    "deploy": "pnpm -r build"
   },
   "devDependencies": {
     "@deuscx/eslint-config": "^0.0.8",
