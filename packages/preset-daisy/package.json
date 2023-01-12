@@ -13,7 +13,7 @@
     "url": "https://github.com/Deuscx/tailwind-uno/issues"
   },
   "scripts": {
-    "prepare": "npm run build:rules & npm run tsup",
+    "prepare": "npm run build:rules & npm run build",
     "build": "tsup",
     "build:rules": "tsx ./src/build.ts"
   },
