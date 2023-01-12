@@ -3,7 +3,7 @@ import colorNames from './colorNames'
 const colorAlias = Object.keys(colorNames)
 export function generateThemeCss(themeName: string, variables: Record<string, string>) {
   return `
-    .[data-theme=${themeName}]{
+    [data-theme=${themeName}]{
         ${Object.entries(variables).map(([key, value]) => {
             // find alias
             if (colorAlias.includes(key))
