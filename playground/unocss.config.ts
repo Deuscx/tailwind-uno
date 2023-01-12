@@ -14,6 +14,7 @@ export default defineConfig({
       sans: '\'Inter\', sans-serif',
       mono: '\'Fira Code\', monospace',
     },
+    themes: ['cupcake'],
   },
   presets: [
     presetAttributify(),

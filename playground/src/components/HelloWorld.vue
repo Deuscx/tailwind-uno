@@ -1,38 +1,32 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
+import { toggleDark } from '../hooks/dark'
 
 const count = ref(0)
 </script>
 
 <template>
-  <div class="alert alert-info shadow-lg">
-    <span>New software update available.</span>
-  </div>
-
-  <div class="card">
-    <button type="button" class="btn btn-primary" @click="count++">
-      count is {{ count }}
+  <div fixed top-1 right-1 items-center>
+    <button class="btn btn-secondary" @click="toggleDark()">
+      <div dark:i-carbon-moon i-carbon-sun />
     </button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
   </div>
+  <div grid place-items-center w-100vw text-center space-y-2>
+    <div class="alert alert-info shadow-lg">
+      <span>New software update available.</span>
+    </div>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">
-    Click on the Vite and Vue logos to learn more
-  </p>
+    <div class="card">
+      <button type="button" class="btn btn-primary" @click="count++">
+        count is {{ count }}
+      </button>
+    </div>
+    <div data-theme="cupcake">
+      <button type="button" class="btn btn-warning" @click="count++">
+        count is {{ count }}
+      </button>
+    </div>
+  </div>
 </template>
 
 <style scoped>

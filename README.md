@@ -36,7 +36,7 @@ export default defineConfig({
 ```
 ## Presets
 
-- [`@deuscx/unocss-preset-daisy`](./packages/preset-daisy/README.md)
+- [`@deuscx/unocss-preset-daisy`](https://github.com/Deuscx/tailwind-uno/tree/main/packages/preset-daisy)
 ## Alternative
 
 This Project is inspired by [unocss-preset-daisy](https://github.com/kidonng/unocss-preset-daisy)
