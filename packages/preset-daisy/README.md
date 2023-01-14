@@ -76,3 +76,8 @@ theme: {
 ## More Docs
 
 [saadeghi/daisyui: ⭐️ ⭐️ ⭐️ ⭐️ ⭐️  The most popular, free and open-source Tailwind CSS component library](https://github.com/saadeghi/daisyui)
+
+## FAQ
+
+### Tailwind Reset CSS
+The preset will automatically insert tailwind reset css for full components

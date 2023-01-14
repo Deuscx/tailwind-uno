@@ -1,7 +1,8 @@
+import fs from 'fs'
+import path from 'path'
 import type { Preflight } from '@unocss/core'
 import defaultThemes from './themes'
 import { generateThemeCss } from './utils'
-
 type ThemeConfig = string | Record<string, Record<string, string>>
 const defaultThemeNames = Object.keys(defaultThemes)
 export const preflights: Preflight[] = [
@@ -102,6 +103,13 @@ export const preflights: Preflight[] = [
         }
         ${customThemes}
         `
+    },
+  },
+  {
+    layer: 'reset',
+    getCSS: () => {
+      const data = fs.readFileSync(path.resolve(__dirname, './tailwind.css'), 'utf8')
+      return data
     },
   },
 ]
