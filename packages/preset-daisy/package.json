@@ -43,9 +43,10 @@
   "devDependencies": {
     "@types/fs-extra": "^11.0.0",
     "@types/node": "^18.11.18",
-    "javascript-stringify": "^2.1.0",
-    "tsx": "^3.12.1",
     "fast-glob": "^3.2.12",
-    "fs-extra": "^11.1.0"
+    "fs-extra": "^11.1.0",
+    "javascript-stringify": "^2.1.0",
+    "postcss": "^8.4.21",
+    "tsx": "^3.12.1"
   }
 }

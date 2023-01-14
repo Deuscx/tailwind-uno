@@ -31,7 +31,7 @@
     "start": "tsx ./src/index.ts",
     "lint": "eslint .",
     "lint:fix": "nr lint --fix",
-    "release": "bumpp package.json packages/**/package.json",
+    "release": "bumpp package.json packages/prest-daisy/package.json",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "test:update": "vitest -u",
@@ -50,7 +50,8 @@
     "unocss": "^0.48.3",
     "vite": "4.0.0",
     "vite-plugin-inspect": "^0.7.10",
-    "vitest": "^0.25.7"
+    "vitest": "^0.25.7",
+    "@deuscx/unocss-preset-daisy": "workspace:*"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
