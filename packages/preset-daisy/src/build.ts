@@ -8,15 +8,23 @@ import postcss from 'postcss'
 // @ts-expect-error
 import colorNames from '../../../daisyui/src/colors/colorNames'
 
+function getDistCSSPath(filePath: string) {
+  return `../../daisyui/dist/${filePath}/*.css`
+}
 async function build() {
-  const entries = await fg(['../../daisyui/dist/components/**/*.css'], { dot: true })
+  const entries = await fg([
+    getDistCSSPath('components/unstyled'),
+    getDistCSSPath('components/styled'),
+    getDistCSSPath('utilities/unstyled'),
+    getDistCSSPath('utilities/styled'),
+  ], { dot: true })
 
   // merge unstyled and styled components;
   const componentMap = new Map<string, string[]>()
   for (const cssPath of entries) {
     const component = path.basename(cssPath, path.extname(cssPath))
     if (componentMap.has(component))
-      componentMap.set(component, [cssPath, ...componentMap.get(component) || []])
+      componentMap.set(component, [...componentMap.get(component) || [], cssPath])
     else
       componentMap.set(component, [cssPath])
   }
